@@ -8,15 +8,26 @@
 	<link rel="stylesheet" type="text/css" href="../style/mentalMentor.css">	
 </head>
 <body>
-	<div class="botText">
-		Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
-		<div class="symptom">
-			wenig Interesse oder Freude an deinen Tätigkeiten
+	
+	<div id="frage_1" class="fragenblock">
+	
+		<div class="botText">
+			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
+			<div class="symptom">
+				wenig Interesse oder Freude an deinen Tätigkeiten
+			</div>
 		</div>
+		
+		<button onclick="updateQuestion('phq_01', 0); showResult();">überhaupt nicht</button>
+		<button onclick="updateQuestion('phq_01', 1); showResult();">an einzelnen Tagen</button>
+		<button onclick="updateQuestion('phq_01', 2); showResult();">an mehr als der Hälfte der Tage</button>
+		<button onclick="updateQuestion('phq_01', 3); showResult();">beinahe jeden Tag</button>
 	</div>
-	<a href="frage03.html" onclick="updateQuestion('phq_01', 0)">überhaupt nicht</a>
-	<a href="frage03.html" onclick="updateQuestion('phq_01', 1)">an einzelnen Tagen</a>
-	<a href="frage03.html" onclick="updateQuestion('phq_01', 2)">an mehr als der Hälfte der Tage</a>
-	<a href="frage03.html" onclick="updateQuestion('phq_01', 3)">beinahe jeden Tag</a>
+	
+	<div id="botResult">
+	
+	</div>
+	
+	
 </body>
 </html>

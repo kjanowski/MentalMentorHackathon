@@ -147,36 +147,56 @@ function getOffers(klinisch, subklinisch)
 
 
 function initQuestionnaire(){
+	//nur den ersten Fragenblock anzeigen
 	counter=1;
 	document.getElementById("frage_1").style.display="block";
 	document.getElementById("frage_2").style.display="none";
 	document.getElementById("frage_3").style.display="none";
 	document.getElementById("frage_4").style.display="none";
 	document.getElementById("frage_5").style.display="none";
+	
+	//am Anfang der Fragen -> zurück-Button ausblenden
+	var zurueckButton = document.getElementById("zurueckButton");		
+	zurueckButton.style.display = "none";
 }
 
 function moveToNext()
 {
+	//alten Block ausblenden
 	var currBlock = document.getElementById("frage_"+counter);
-	if(currBlock != none)
+	if(currBlock != undefined)
 		currBlock.style.display="none";
 	
 	counter++;
 
+	//neuen Block einblenden
 	var nextBlock =	document.getElementById("frage_"+counter);
-	if(currBlock != none)
-		currBlock.style.display="block";	
+	if(nextBlock != undefined)
+		nextBlock.style.display="block";	
+
+	//zurück-Button einblenden
+	var zurueckButton = document.getElementById("zurueckButton");		
+	zurueckButton.style.display = "block";
 }
 
 function moveBack()
 {
+	//alten Block ausblenden
 	var currBlock = document.getElementById("frage_"+counter);
-	if(currBlock != none)
+	if(currBlock != undefined)
 		currBlock.style.display="none";
 	
 	counter--;
 
+	//neuen Block einblenden
 	var nextBlock =	document.getElementById("frage_"+counter);
-	if(currBlock != none)
-		currBlock.style.display="block";	
+	if(nextBlock != undefined)
+		nextBlock.style.display="block";
+	
+	if(counter==1)
+	{
+		//am Anfang der Fragen angekommen -> zurück-Button ausblenden
+		var zurueckButton = document.getElementById("zurueckButton");		
+		zurueckButton.style.display = "none";
+	}
 }

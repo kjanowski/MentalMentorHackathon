@@ -74,7 +74,7 @@ button.linkgelb{
 	margin-right:10px;
 	background:#ffffff;
 	padding: 10px;
-	height: 350px;
+	height: 370px;
 	border: 1px solid #cccccc;
 	display: inline-block;
 	vertical-align:top;
@@ -102,7 +102,7 @@ button.linkgelb{
 	margin-right: 20px;
 }
 
-.ergebnisBlock .a{
+.ergebnisBlock a.linkgruen{
 	margin-top:20px;
 	display:inline-block;
 }

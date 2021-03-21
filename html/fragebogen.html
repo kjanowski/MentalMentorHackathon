@@ -14,14 +14,15 @@
 		<div class="botText">
 			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
 			<div class="symptom">
-				wenig Interesse oder Freude an deinen Tätigkeiten
+				Wenig Interesse oder Freude an deinen Tätigkeiten
 			</div>
 		</div>
-		
-		<button onclick="updateQuestion('phq_01', 0); moveToNext();" class="hovergruen">überhaupt nicht</button>
-		<button onclick="updateQuestion('phq_01', 1); moveToNext();" class="hovergruen">an einzelnen Tagen</button>
-		<button onclick="updateQuestion('phq_01', 2); moveToNext();" class="hovergruen">an mehr als der Hälfte der Tage</button>
-		<button onclick="updateQuestion('phq_01', 3); moveToNext();" class="hovergruen">beinahe jeden Tag</button>
+		<div class="answer">
+			<button onclick="updateQuestion('phq_01', 0); moveToNext();" class="hovergruen">überhaupt nicht</button>
+			<button onclick="updateQuestion('phq_01', 1); moveToNext();" class="hovergruen">an einzelnen Tagen</button>
+			<button onclick="updateQuestion('phq_01', 2); moveToNext();" class="hovergruen">an mehr als der Hälfte der Tage</button>
+			<button onclick="updateQuestion('phq_01', 3); moveToNext();" class="hovergruen">beinahe jeden Tag</button>
+		</div>
 	</div>
 	
 	<div id="frage_2" class="fragenblock">
@@ -32,11 +33,12 @@
 				Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit
 			</div>
 		</div>
-		
-		<button onclick="updateQuestion('phq_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
-		<button onclick="updateQuestion('phq_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
-		<button onclick="updateQuestion('phq_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
-		<button onclick="updateQuestion('phq_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
+		<div class="answer">
+			<button onclick="updateQuestion('phq_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
+			<button onclick="updateQuestion('phq_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
+			<button onclick="updateQuestion('phq_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
+			<button onclick="updateQuestion('phq_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
+		</div>
 	</div>
 	
 	<div id="frage_3" class="fragenblock">
@@ -47,11 +49,12 @@
 				Nervosität, Ängstlichkeit oder Anspannung
 			</div>
 		</div>
-		
-		<button onclick="updateQuestion('gad_01', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
-		<button onclick="updateQuestion('gad_01', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
-		<button onclick="updateQuestion('gad_01', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
-		<button onclick="updateQuestion('gad_01', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
+		<div class="answer">
+			<button onclick="updateQuestion('gad_01', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
+			<button onclick="updateQuestion('gad_01', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
+			<button onclick="updateQuestion('gad_01', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
+			<button onclick="updateQuestion('gad_01', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
+		</div>
 	</div>
 	
 	<div id="frage_4" class="fragenblock">
@@ -59,14 +62,15 @@
 		<div class="botText">
 			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
 			<div class="symptom">
-				nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren
+				Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren
 			</div>
 		</div>
-		
-		<button onclick="updateQuestion('gad_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
-		<button onclick="updateQuestion('gad_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
-		<button onclick="updateQuestion('gad_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
-		<button onclick="updateQuestion('gad_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
+		<div class="answer">
+			<button onclick="updateQuestion('gad_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
+			<button onclick="updateQuestion('gad_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
+			<button onclick="updateQuestion('gad_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
+			<button onclick="updateQuestion('gad_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
+		</div>
 	</div>
 	
 	<div id="frage_5" class="fragenblock">
@@ -75,11 +79,13 @@
 			Es gibt viele unterschiedliche Arten von Angeboten zur Stärkung der psychischen Gesundheit. 
 			Gibt es Angebote, die du ausschließen möchtest?
 		</div>
-		
-		<input type="checkbox" id="exclude_online">Online-Angebote</input>
-		<input type="checkbox" id="exclude_hotline">Telefonhotlines</input>
-		<br>
-		<button onclick="updateExclusion(); showResult();"class="hovergruen">Ergebnisse anzeigen</button>
+		<div class="answer">
+			<div class="mehrfachwahl">
+				<input type="checkbox" id="exclude_online">Online-Angebote</input>
+				<input type="checkbox" id="exclude_hotline">Telefonhotlines</input>
+			</div>
+			<button onclick="updateExclusion(); showResult();"class="hovergruen">Ergebnisse anzeigen</button>
+		</div>
 	</div>
 	
 	<div id="fortschritt-hg">

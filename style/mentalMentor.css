@@ -1,5 +1,6 @@
 :root{
 	--buttonColor: #468189;
+	--textColorWthie: white; 
 	--buttonColorGelb: #f2dd6e;
 	--fontFamily: Roboto;
 }
@@ -15,14 +16,18 @@ body{
 
 a.linkgruen{
 	background:var(--buttonColor);
-	border-radius: 20px;
+	border-radius: 10px;
+	color: --textColorWthie;
+  	font-weight:bold;	
 	padding:10px;
 	height:100px;
 }
 
 a.linkgelb{
 	background:var(--buttonColorGelb);
-	border-radius: 20px;
+	border-radius: 10px;
+	color: --textColorWthie;
+	font-weight:bold;
 	padding:10px;
 	height:100px;
 }

@@ -205,8 +205,12 @@ function moveToNext()
 
 	//zurück-Button einblenden
 	var zurueckButton = document.getElementById("zurueckButton");		
-	zurueckButton.style.display = "block";
+	zurueckButton.style.display = "inline-block";
 	updateProgress();
+	
+	//Link zur Alterabfrage ausblenden
+	var zurueckLink = document.getElementById("zurueckZuAlter");		
+	zurueckLink.style.display = "none";
 }
 
 function moveBack()
@@ -225,9 +229,11 @@ function moveBack()
 	
 	if(counter==1)
 	{
-		//am Anfang der Fragen angekommen -> zurück-Button ausblenden
+		//am Anfang der Fragen angekommen -> zurück-Button ausblenden, stattdessen Link zur Altersabfrage einblenden
 		var zurueckButton = document.getElementById("zurueckButton");		
 		zurueckButton.style.display = "none";
+		var zurueckLink = document.getElementById("zurueckZuAlter");		
+		zurueckLink.style.display = "inline-block";
 	}
 	
 	updateProgress();

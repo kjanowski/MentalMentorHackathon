@@ -3,6 +3,8 @@
 	--textColorWthie: white; 
 	--buttonColorGelb: #f2dd6e;
 	--fontFamily: Roboto;
+	--textColorInfo: #333333;
+
 }
 
 body{
@@ -50,8 +52,9 @@ span.infoQuestion{
 	font-weight:700;
 }
 span.infoAnswer{
-	margin-left:50px;
-	font-style:italic;
+	margin:50px;
+	color: 0.1;
+	line-height: 1.6;
 }
 
 .column{

@@ -17,6 +17,7 @@ body{
 }
 
 a.linkgruen{
+	display:inline-block;
 	background:var(--buttonColor);
 	border-radius: 10px;
 	border: none;
@@ -39,13 +40,15 @@ button.hovergruen:hover{
   }
 
 a.linkgelb{
+	display:inline-block;
 	background:var(--buttonColorGelb);
 	border-radius: 10px;
 	border: none;
-	color: var(--textColorWthie);
+	color: var(--textColorInfo);
 	font-weight:bold;
 	padding:10px;
 	height:100px;
+	margin-top:20px;
 }
 
 span.infoQuestion{

@@ -45,3 +45,11 @@ a.linkgelb{
 	padding:10px;
 	height:100px;
 }
+
+span.infoQuestion{
+	font-weight:700;
+}
+span.infoAnswer{
+	margin-left:50px;
+	font-style:italic;
+}

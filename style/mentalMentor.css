@@ -1,0 +1,19 @@
+:root{
+	--buttonColor: #468189;
+	--fontFamily: Roboto;
+}
+
+body{
+	font-family: var(--fontFamily);
+}
+
+.botText{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+a{
+	background:var(--buttonColor);
+	padding:10px;
+	height:100px;
+}

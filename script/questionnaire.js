@@ -46,8 +46,8 @@ function showResult()
 	var resultElement = document.getElementById("botResult");
 	
 	if(table.length==0)
-		resultElement.innerHTML = "Leider habe ich keine passenden Angebote gefunden. Das kann daran liegen, dass du zu viele Arten von Angeboten ausgeschlossen hast. Du könntest noch einmal zurück gehen und mehr Arten zulassen.";
-	else resultElement.innerHTML = "Hier sind die Angebote, die ich für dich gefunden habe.\n"+ table;
+		resultElement.innerHTML = "Leider haben wir keine passenden Angebote gefunden. Das kann daran liegen, dass du zu viele Arten von Angeboten ausgeschlossen hast. Du könntest noch einmal zurück gehen und mehr Arten zulassen.";
+	else resultElement.innerHTML = "Hier sind die Angebote, die wir für dich gefunden haben.\n"+ table;
 }
 
 function isIncluded(angebot){

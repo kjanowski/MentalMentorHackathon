@@ -40,14 +40,14 @@ function showResult()
 	
 	//var text = "GAD score: "+gadScore+", PHQ score: "+phqScore+" -> klinisch: "+klinisch;
 	
-	var table = getOffers(klinisch, subklinisch);
+	var result = getOffers(klinisch, subklinisch);
 
 
 	var resultElement = document.getElementById("botResult");
 	
-	if(table.length==0)
-		resultElement.innerHTML = "Leider haben wir keine passenden Angebote gefunden. Das kann daran liegen, dass du zu viele Arten von Angeboten ausgeschlossen hast. Du könntest noch einmal zurück gehen und mehr Arten zulassen.";
-	else resultElement.innerHTML = "Hier sind die Angebote, die wir für dich gefunden haben.\n"+ table;
+	if(result.length==0)
+		resultElement.innerHTML = "<div class=\"botText\">Leider haben wir keine passenden Angebote gefunden. Das kann daran liegen, dass du zu viele Arten von Angeboten ausgeschlossen hast. Du könntest noch einmal zurück gehen und mehr Arten zulassen.</div>";
+	else resultElement.innerHTML = "<div class=\"botText\">Hier sind die Angebote, die wir für dich gefunden haben.</div>"+ result;
 }
 
 function isIncluded(angebot){

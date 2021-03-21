@@ -23,7 +23,27 @@ a.linkgruen{
 	height:100px;
 }
 
+button.hovergruen{
+	background: lightgrey;
+	height:30px;
+	border-radius: 5px;
+}
+
+button.hovergruen:hover{
+	background-color: var(--buttonColor) ; /* Green */
+	color: white;
+  }
+
 a.linkgelb{
+	background:var(--buttonColorGelb);
+	border-radius: 10px;
+	color: var(--textColorWthie);
+	font-weight:bold;
+	padding:10px;
+	height:100px;
+}
+
+a.linkgruenHover{
 	background:var(--buttonColorGelb);
 	border-radius: 10px;
 	color: var(--textColorWthie);

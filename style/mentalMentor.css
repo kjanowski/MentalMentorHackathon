@@ -51,11 +51,11 @@ button.linkgelb{
 	height:25px;
 }
 
-span.infoQuestion{
+.infoQuestion{
 	font-weight:700;
 }
-span.infoAnswer{
-	margin:50px;
+.infoAnswer{
+	margin-left:50px;
 	color: var(--textColorInfo);
 	line-height: 1.6;
 }

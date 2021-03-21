@@ -74,9 +74,10 @@ button.linkgelb{
 	margin-right:10px;
 	background:#ffffff;
 	padding: 10px;
-	/* height: 300px; */
+	height: 350px;
 	border: 1px solid #cccccc;
 	display: inline-block;
+	vertical-align:top;
 }
 
 .ergebnisBlock .cost{
@@ -103,7 +104,7 @@ button.linkgelb{
 
 .ergebnisBlock .a{
 	margin-top:20px;
-	
+	display:inline-block;
 }
 
 #fortschritt-hg{

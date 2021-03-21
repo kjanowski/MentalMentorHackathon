@@ -8,7 +8,6 @@
 	<link rel="stylesheet" type="text/css" href="../style/mentalMentor.css">	
 </head>
 <body>
-	
 	<div id="frage_1" class="fragenblock">
 	
 		<div class="botText">
@@ -18,11 +17,60 @@
 			</div>
 		</div>
 		
-		<button onclick="updateQuestion('phq_01', 0); showResult();">überhaupt nicht</button>
-		<button onclick="updateQuestion('phq_01', 1); showResult();">an einzelnen Tagen</button>
-		<button onclick="updateQuestion('phq_01', 2); showResult();">an mehr als der Hälfte der Tage</button>
-		<button onclick="updateQuestion('phq_01', 3); showResult();">beinahe jeden Tag</button>
+		<button onclick="updateQuestion('phq_01', 0); moveToNext();">überhaupt nicht</button>
+		<button onclick="updateQuestion('phq_01', 1); moveToNext();">an einzelnen Tagen</button>
+		<button onclick="updateQuestion('phq_01', 2); moveToNext();">an mehr als der Hälfte der Tage</button>
+		<button onclick="updateQuestion('phq_01', 3); moveToNext();">beinahe jeden Tag</button>
 	</div>
+	
+	<div id="frage_2" class="fragenblock">
+	
+		<div class="botText">
+			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
+			<div class="symptom">
+				Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit
+			</div>
+		</div>
+		
+		<button onclick="updateQuestion('phq_02', 0); moveToNext();">überhaupt nicht</button>
+		<button onclick="updateQuestion('phq_02', 1); moveToNext();">an einzelnen Tagen</button>
+		<button onclick="updateQuestion('phq_02', 2); moveToNext();">an mehr als der Hälfte der Tage</button>
+		<button onclick="updateQuestion('phq_02', 3); moveToNext();">beinahe jeden Tag</button>
+	</div>
+	
+	<div id="frage_3" class="fragenblock">
+	
+		<div class="botText">
+			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
+			<div class="symptom">
+				Nervosität, Ängstlichkeit oder Anspannung
+			</div>
+		</div>
+		
+		<button onclick="updateQuestion('gad_01', 0); moveToNext();">überhaupt nicht</button>
+		<button onclick="updateQuestion('gad_01', 1); moveToNext();">an einzelnen Tagen</button>
+		<button onclick="updateQuestion('gad_01', 2); moveToNext();">an mehr als der Hälfte der Tage</button>
+		<button onclick="updateQuestion('gad_01', 3); moveToNext();">beinahe jeden Tag</button>
+	</div>
+	
+	<div id="frage_4" class="fragenblock">
+	
+		<div class="botText">
+			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
+			<div class="symptom">
+				nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren
+			</div>
+		</div>
+		
+		<button onclick="updateQuestion('gad_02', 0); showResult();">überhaupt nicht</button>
+		<button onclick="updateQuestion('gad_02', 1); showResult();">an einzelnen Tagen</button>
+		<button onclick="updateQuestion('gad_02', 2); showResult();">an mehr als der Hälfte der Tage</button>
+		<button onclick="updateQuestion('gad_02', 3); showResult();">beinahe jeden Tag</button>
+	</div>
+	
+	<button onclick="moveBack();">zurück</button>
+	
+	<script> initQuestionnaire(); </script>
 	
 	<div id="botResult">
 	

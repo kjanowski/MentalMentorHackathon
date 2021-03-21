@@ -60,3 +60,33 @@ span.infoAnswer{
 	margin-left:10px;
 	margin-right:10px;
 }
+
+
+.ergebnisBlock{
+	width: 40%;
+	margin-left:10px;
+	margin-right:10px;
+	background:#ffffff;
+	padding: 10px;
+	border: 1px solid #cccccc;
+	display: inline-block;
+}
+
+.ergebnisBlock .cost{
+	margin-left:-3px;
+	margin-top:-3px;
+	background:#00ff00; /*Platzhalter-Farbe*/
+}
+
+.ergebnisBlock .name{
+	font-size: 20px;
+	background:#eeeeee; /*Platzhalter-Farbe*/
+}
+
+.ergebnisBlock .description{
+	background:#fefefe; /*Platzhalter-Farbe*/
+}
+
+.ergebnisBlock .a{
+	margin-top:20px;
+}

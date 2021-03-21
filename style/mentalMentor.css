@@ -16,7 +16,7 @@ body{
 
 a.linkgruen{
 	background:var(--buttonColor);
-	border-radius: 20px;
+	border-radius: 10px;
 	color: --textColorWthie;
   	font-weight:bold;	
 	padding:10px;
@@ -25,7 +25,7 @@ a.linkgruen{
 
 a.linkgelb{
 	background:var(--buttonColorGelb);
-	border-radius: 20px;
+	border-radius: 10px;
 	color: --textColorWthie;
 	font-weight:bold;
 	padding:10px;

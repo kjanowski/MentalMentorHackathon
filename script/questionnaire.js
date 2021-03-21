@@ -17,6 +17,7 @@ phqCutoff = 3;
 
 //Fragen-Zähler
 var counter=1;
+var numQuestions=5.0;
 
 function updateQuestion(questionID, score)
 {
@@ -158,7 +159,12 @@ function getOffers(klinisch, subklinisch)
 	return resultText;
 }
 
-
+function updateProgress(){
+	var progress = counter/numQuestions;
+	
+	var bar = document.getElementById("fortschritt-vg");
+	bar.style.width=100*progress+"%";
+}
 
 function initQuestionnaire(){
 	//nur den ersten Fragenblock anzeigen
@@ -172,6 +178,7 @@ function initQuestionnaire(){
 	//am Anfang der Fragen -> zurück-Button ausblenden
 	var zurueckButton = document.getElementById("zurueckButton");		
 	zurueckButton.style.display = "none";
+	updateProgress();
 }
 
 function moveToNext()
@@ -191,6 +198,7 @@ function moveToNext()
 	//zurück-Button einblenden
 	var zurueckButton = document.getElementById("zurueckButton");		
 	zurueckButton.style.display = "block";
+	updateProgress();
 }
 
 function moveBack()
@@ -213,4 +221,6 @@ function moveBack()
 		var zurueckButton = document.getElementById("zurueckButton");		
 		zurueckButton.style.display = "none";
 	}
+	
+	updateProgress();
 }

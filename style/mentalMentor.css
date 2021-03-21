@@ -15,12 +15,14 @@ body{
 
 a.linkgruen{
 	background:var(--buttonColor);
+	border-radius: 20px;
 	padding:10px;
 	height:100px;
 }
 
 a.linkgelb{
 	background:var(--buttonColorGelb);
+	border-radius: 20px;
 	padding:10px;
 	height:100px;
 }

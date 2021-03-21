@@ -24,7 +24,7 @@ a.linkgruen{
 	color: var(--textColorWthie);
   	font-weight:bold;	
 	padding:10px;
-	height:100px;
+	height:25px;
 }
 
 button.hovergruen{
@@ -48,7 +48,7 @@ button.linkgelb{
 	color: var(--textColorInfo);
 	font-weight:bold;
 	padding:10px;
-	height:100px;
+	height:25px;
 }
 
 span.infoQuestion{
@@ -56,7 +56,7 @@ span.infoQuestion{
 }
 span.infoAnswer{
 	margin:50px;
-	color: 0.1;
+	color: var(--textColorInfo);
 	line-height: 1.6;
 }
 
@@ -100,12 +100,12 @@ span.infoAnswer{
 #fortschritt-hg{
 	height:20px;
 	width:500px;
-	background:#cccccc;
+	background:#3f3c3c;
 }
 
 #fortschritt-vg{
 	height:20px;
-	background:#ababab;
+	background:#a1e8af;
 }
 
 .symptom

@@ -17,6 +17,7 @@ body{
 a.linkgruen{
 	background:var(--buttonColor);
 	border-radius: 10px;
+	border: none;
 	color: var(--textColorWthie);
   	font-weight:bold;	
 	padding:10px;
@@ -27,6 +28,7 @@ button.hovergruen{
 	background: lightgrey;
 	height:30px;
 	border-radius: 5px;
+	border: none;
 }
 
 button.hovergruen:hover{
@@ -37,15 +39,7 @@ button.hovergruen:hover{
 a.linkgelb{
 	background:var(--buttonColorGelb);
 	border-radius: 10px;
-	color: var(--textColorWthie);
-	font-weight:bold;
-	padding:10px;
-	height:100px;
-}
-
-a.linkgruenHover{
-	background:var(--buttonColorGelb);
-	border-radius: 10px;
+	border: none;
 	color: var(--textColorWthie);
 	font-weight:bold;
 	padding:10px;

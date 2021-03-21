@@ -17,7 +17,7 @@ var angebote = [
 		vermittlung:	1,
 		beratung:	0,
 		austausch:	0,
-		contact:	"offline",
+		contact:	"offline"
 	},
 	{	
 		name:	"HelloBetter",
@@ -37,7 +37,7 @@ var angebote = [
 		vermittlung:	0,
 		beratung:	0,
 		austausch:	1,
-		contact:	"beides",
+		contact:	"beides"
 
 
 	},
@@ -59,7 +59,7 @@ var angebote = [
 		vermittlung:	1,
 		beratung:	1,
 		austausch:	0,
-		contact:	"online",
+		contact:	"online"
 	},
 	{
 		name:	"Psychenet: Netz Psychische Gesundheit",
@@ -79,7 +79,7 @@ var angebote = [
 		vermittlung:	1,
 		beratung:	1,
 		austausch:	0,
-		contact:	"online",
+		contact:	"online"
 		
 	},
 	{
@@ -100,7 +100,7 @@ var angebote = [
 		vermittlung:	0,
 		beratung:	0,
 		austausch:	0,
-		contact:	"online",
+		contact:	"online"
 	
 	
 		
@@ -123,7 +123,7 @@ var angebote = [
 		vermittlung:	0,
 		beratung:	1,
 		austausch:	0,
-		contact:	"beides",
+		contact:	"beides"
 		
 	},
 	{
@@ -144,7 +144,7 @@ var angebote = [
 		vermittlung:	0,
 		beratung:	1,
 		austausch:	0,
-		contact:	"offline";
+		contact:	"offline"
 
 	},
 	{
@@ -165,7 +165,7 @@ var angebote = [
 		vermittlung:	1,
 		beratung:	1,
 		austausch:	0,
-		contact:	"beides";
+		contact:	"beides"
 		
 	},
 	{
@@ -186,7 +186,7 @@ var angebote = [
 		vermittlung:	0,
 		beratung:	0,
 		austausch:	0,
-		contact:	"online",
+		contact:	"online"
 			
 	},
 	{
@@ -207,7 +207,7 @@ var angebote = [
 		vermittlung:	0,
 		beratung:	1,
 		austausch:	0,
-		contact:	"online",
+		contact:	"online"
 			
 	},
 	{
@@ -228,8 +228,7 @@ var angebote = [
 		vermittlung:	0,
 		beratung:	0,
 		austausch:	0,
-		contact:	"offline",
+		contact:	"offline"
 	
-	},
-	
+	}
 ];

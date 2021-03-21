@@ -93,3 +93,15 @@ span.infoAnswer{
 .ergebnisBlock .a{
 	margin-top:20px;
 }
+
+#fortschritt-hg{
+	height:20px;
+	width:500px;
+	background:#cccccc;
+}
+
+#fortschritt-vg{
+	height:20px;
+	background:#ababab;
+}
+

@@ -17,7 +17,7 @@ phqCutoff = 3;
 
 //Fragen-Zähler
 var counter=1;
-var numQuestions=5.0;
+var numQuestions=5;
 
 function updateQuestion(questionID, score)
 {
@@ -31,8 +31,8 @@ function updateExclusion(){
 
 function showResult()
 {
-	moveToNext(); //letzte Frage ausblenden und Zähler hinter das Ende setzen 
-
+	moveToNext(); //letzte Frage ausblenden und Zähler hinter das Ende setzen
+	
 	var gadScore = gatheredInfo.questions['gad_01']+gatheredInfo.questions['gad_02'];
 	var phqScore = gatheredInfo.questions['phq_01']+gatheredInfo.questions['phq_02'];
 	var klinisch = (gadScore>=gadCutoff) || (phqScore>=phqCutoff);
@@ -160,10 +160,17 @@ function getOffers(klinisch, subklinisch)
 }
 
 function updateProgress(){
-	var progress = counter/numQuestions;
+	var progress = counter/(numQuestions*1.0);
 	
 	var bar = document.getElementById("fortschritt-vg");
 	bar.style.width=100*progress+"%";
+	bar.innerHTML = "Frage "+counter+" von "+numQuestions;
+	
+	//Fortschrittsbalken nur anzeigen, wenn das Ergebnis noch nicht erreicht ist
+	if(progress > 1.0)
+		document.getElementById("fortschritt-hg").style.display="none";
+	else document.getElementById("fortschritt-hg").style.display="block";
+
 }
 
 function initQuestionnaire(){
@@ -178,6 +185,7 @@ function initQuestionnaire(){
 	//am Anfang der Fragen -> zurück-Button ausblenden
 	var zurueckButton = document.getElementById("zurueckButton");		
 	zurueckButton.style.display = "none";
+	
 	updateProgress();
 }
 

@@ -52,13 +52,15 @@ function showResult()
 function isIncluded(angebot){
 	if(gatheredInfo.exclude['online'])
 	{
-		if((angebot.art_website_pdf == 1) || (angebot.contact == "online"))
+		//schließt aus, wenn Online-Kontakt vorliegt
+		if(angebot.contact == "online")
 			return false;
 	}
 	
 	if(gatheredInfo.exclude['hotline'])
 	{
-		if(angebot.art_hotline == 1)
+		//schliesst aus, wenn nur Hotline, aber kein Online-Angebot vorliegt
+		if((angebot.art_hotline == 1) && (angebot.art_website_pdf == 0))
 			return false;
 	}
 	
@@ -70,8 +72,8 @@ function getOffers(klinisch, subklinisch)
 {
 	var numOffers = 0;
 	
-	//Tabellen-Header
-	var tableText = "<table><tr><th>Name</th><th>Kurzbeschreibung</th><th>Art des Angebots</th><th>Bezahlung</th><th>Link</th></tr>"
+	//Ergebnis-Liste anfangs leer
+	var resultText = "<div class=\"ergebnisse\">"
 	
 	for(angebot of angebote)
 	{
@@ -132,14 +134,13 @@ function getOffers(klinisch, subklinisch)
 				//Kostenart (1 abziehen, um Index in der Mapping-Liste zu erhalten)
 				var cost = cost_map[angebot.cost-1];
 				
-				//Tabellen-Zeile hinzufügen
-				tableText = tableText + "<tr>"
-						+"<td class=\"name\">"+angebot.name+"</td>"
-						+"<td class=\"beschreibung\">"+angebot.description+"</td>"
-						+"<td class=\"art\">"+angebotsArt+"</td>"
-						+"<td class=\"kosten\">"+cost+"</td>"
-						+"<td class=\"link\"><a class=\"linkgruen\" href=\""+angebot.link+"\">zum Angebot</a></td>"
-					+"</tr>";		
+				//Ergebnis-Block hinzufügen
+				resultText = resultText + "<div class=\"ergebnisBlock\">"
+						+"<div class=\"kosten\">"+cost+"</div>"
+						+"<div class=\"name\">"+angebot.description+"</div>"
+						+"<div class=\"beschreibung\">"+angebot.description+"</div>"
+						+"<a class=\"linkgruen\" href=\""+angebot.link+"\" target=\"_blank\">zum Angebot</a>"
+					+"</div>";		
 			}
 		}
 	}
@@ -151,10 +152,10 @@ function getOffers(klinisch, subklinisch)
 	}
 	
 	
-	//ansonsten die Tabelle abschliessen
-	tableText = tableText+"</table>";
+	//ansonsten die Liste abschliessen
+	resultText = resultText+"</div>";
 	
-	return tableText;
+	return resultText;
 }
 
 

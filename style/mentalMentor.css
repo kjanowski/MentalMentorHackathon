@@ -40,7 +40,20 @@ button.hovergruen:hover{
 	color: white;
   }
 
-a.linkgelb,
+a.linkgelb{
+	display:inline-block;
+	background:var(--buttonColorGelb);
+	border-radius: 10px;
+	border: none;
+	color: var(--textColorInfo);
+	font-weight:bold;
+	text-decoration:none;
+	padding:10px;
+	font-size:16px;
+	height:25px;
+	vertical-align:top;
+}
+
 button.linkgelb{
 	display:inline-block;
 	background:var(--buttonColorGelb);
@@ -48,8 +61,10 @@ button.linkgelb{
 	border: none;
 	color: var(--textColorInfo);
 	font-weight:bold;
+	font-size:16px;
 	padding:10px;
-	height:25px;
+	height:45px;
+	vertical-align:top;
 }
 
 .infoQuestion{

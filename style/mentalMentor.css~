@@ -1,6 +1,6 @@
 :root{
 	--buttonColor: #468189;
-	--buttonColorGelb: #f2dd6e;
+	--buttonColorBack: #f2dd6e;
 	--fontFamily: Roboto;
 }
 
@@ -13,14 +13,13 @@ body{
 	margin-bottom: 20px;
 }
 
-a.linkgruen{
+a{
 	background:var(--buttonColor);
 	padding:10px;
 	height:100px;
 }
-
-a.linkgelb{
-	background:var(--buttonColorGelb);
+a{
+	background:var(--buttonColor);
 	padding:10px;
 	height:100px;
 }

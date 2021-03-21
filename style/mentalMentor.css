@@ -53,3 +53,10 @@ span.infoAnswer{
 	margin-left:50px;
 	font-style:italic;
 }
+
+.column{
+	display:inline-block;
+	width:40%;
+	margin-left:10px;
+	margin-right:10px;
+}

@@ -9,100 +9,101 @@
 	<link rel="stylesheet" type="text/css" href="../style/mentalMentor.css">	
 </head>
 <body>
-	<div id="frage_1" class="fragenblock">
-	
-		<div class="botText">
-			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
-			<div class="symptom">
-				Wenig Interesse oder Freude an deinen Tätigkeiten
+	<div class="page">
+		<div id="frage_1" class="fragenblock">
+		
+			<div class="botText">
+				Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
+				<div class="symptom">
+					Wenig Interesse oder Freude an deinen Tätigkeiten
+				</div>
+			</div>
+			<div class="answer">
+				<button onclick="updateQuestion('phq_01', 0); moveToNext();" class="hovergruen">überhaupt nicht</button>
+				<button onclick="updateQuestion('phq_01', 1); moveToNext();" class="hovergruen">an einzelnen Tagen</button>
+				<button onclick="updateQuestion('phq_01', 2); moveToNext();" class="hovergruen">an mehr als der Hälfte der Tage</button>
+				<button onclick="updateQuestion('phq_01', 3); moveToNext();" class="hovergruen">beinahe jeden Tag</button>
 			</div>
 		</div>
-		<div class="answer">
-			<button onclick="updateQuestion('phq_01', 0); moveToNext();" class="hovergruen">überhaupt nicht</button>
-			<button onclick="updateQuestion('phq_01', 1); moveToNext();" class="hovergruen">an einzelnen Tagen</button>
-			<button onclick="updateQuestion('phq_01', 2); moveToNext();" class="hovergruen">an mehr als der Hälfte der Tage</button>
-			<button onclick="updateQuestion('phq_01', 3); moveToNext();" class="hovergruen">beinahe jeden Tag</button>
-		</div>
-	</div>
-	
-	<div id="frage_2" class="fragenblock">
-	
-		<div class="botText">
-			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
-			<div class="symptom">
-				Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit
+		
+		<div id="frage_2" class="fragenblock">
+		
+			<div class="botText">
+				Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
+				<div class="symptom">
+					Niedergeschlagenheit, Schwermut oder Hoffnungslosigkeit
+				</div>
+			</div>
+			<div class="answer">
+				<button onclick="updateQuestion('phq_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
+				<button onclick="updateQuestion('phq_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
+				<button onclick="updateQuestion('phq_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
+				<button onclick="updateQuestion('phq_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
 			</div>
 		</div>
-		<div class="answer">
-			<button onclick="updateQuestion('phq_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
-			<button onclick="updateQuestion('phq_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
-			<button onclick="updateQuestion('phq_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
-			<button onclick="updateQuestion('phq_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
-		</div>
-	</div>
-	
-	<div id="frage_3" class="fragenblock">
-	
-		<div class="botText">
-			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
-			<div class="symptom">
-				Nervosität, Ängstlichkeit oder Anspannung
+		
+		<div id="frage_3" class="fragenblock">
+		
+			<div class="botText">
+				Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
+				<div class="symptom">
+					Nervosität, Ängstlichkeit oder Anspannung
+				</div>
+			</div>
+			<div class="answer">
+				<button onclick="updateQuestion('gad_01', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
+				<button onclick="updateQuestion('gad_01', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
+				<button onclick="updateQuestion('gad_01', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
+				<button onclick="updateQuestion('gad_01', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
 			</div>
 		</div>
-		<div class="answer">
-			<button onclick="updateQuestion('gad_01', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
-			<button onclick="updateQuestion('gad_01', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
-			<button onclick="updateQuestion('gad_01', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
-			<button onclick="updateQuestion('gad_01', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
-		</div>
-	</div>
-	
-	<div id="frage_4" class="fragenblock">
-	
-		<div class="botText">
-			Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
-			<div class="symptom">
-				Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren
+		
+		<div id="frage_4" class="fragenblock">
+		
+			<div class="botText">
+				Wie oft hast du dich im Verlauf der letzten 2 Wochen durch die folgenden Beschwerden beeinträchtigt gefühlt?
+				<div class="symptom">
+					Nicht in der Lage sein, Sorgen zu stoppen oder zu kontrollieren
+				</div>
+			</div>
+			<div class="answer">
+				<button onclick="updateQuestion('gad_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
+				<button onclick="updateQuestion('gad_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
+				<button onclick="updateQuestion('gad_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
+				<button onclick="updateQuestion('gad_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
 			</div>
 		</div>
-		<div class="answer">
-			<button onclick="updateQuestion('gad_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
-			<button onclick="updateQuestion('gad_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
-			<button onclick="updateQuestion('gad_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
-			<button onclick="updateQuestion('gad_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
-		</div>
-	</div>
-	
-	<div id="frage_5" class="fragenblock">
-	
-		<div class="botText">
-			Es gibt viele unterschiedliche Arten von Angeboten zur Stärkung der psychischen Gesundheit. 
-			Gibt es Angebote, die du ausschließen möchtest?
-		</div>
-		<div class="answer">
-			<div class="mehrfachwahl">
-				<input type="checkbox" id="exclude_online">Online-Angebote</input>
-				<input type="checkbox" id="exclude_hotline">Telefonhotlines</input>
+		
+		<div id="frage_5" class="fragenblock">
+		
+			<div class="botText">
+				Es gibt viele unterschiedliche Arten von Angeboten zur Stärkung der psychischen Gesundheit. 
+				Gibt es Angebote, die du ausschließen möchtest?
 			</div>
-			<button onclick="updateExclusion(); showResult();"class="hovergruen">Ergebnisse anzeigen</button>
+			<div class="answer">
+				<div class="mehrfachwahl">
+					<input type="checkbox" id="exclude_online">Online-Angebote</input>
+					<input type="checkbox" id="exclude_hotline">Telefonhotlines</input>
+				</div>
+				<button onclick="updateExclusion(); showResult();"class="hovergruen">Ergebnisse anzeigen</button>
+			</div>
+		</div>
+		
+		<div id="fortschritt-hg">
+			<div id="fortschritt-vg">
+			</div>
+		</div>
+		
+		<br>
+		<a id="zurueckZuAlter" class="linkgelb" href="altersabfrage.html">zurück</a>
+		<button id="zurueckButton" onclick="moveBack();" class="linkgelb">zurück</button>
+		<a class="linkgelb" href="intro.html">von vorne beginnen</a>
+		
+		<br>
+		<div id="botResult">
+		
 		</div>
 	</div>
-	
-	<div id="fortschritt-hg">
-		<div id="fortschritt-vg">
-		</div>
-	</div>
-	
-	<br>
-	<a id="zurueckZuAlter" class="linkgelb" href="altersabfrage.html">zurück</a>
-	<button id="zurueckButton" onclick="moveBack();" class="linkgelb">zurück</button>
-	<a class="linkgelb" href="intro.html">von vorne beginnen</a>
-	
-	<br>
-	<div id="botResult">
-	
-	</div>
-	
 	<script> initQuestionnaire(); </script>
 </body>
 </html>

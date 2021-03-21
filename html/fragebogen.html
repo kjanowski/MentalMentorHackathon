@@ -63,11 +63,25 @@
 			</div>
 		</div>
 		
-		<button onclick="updateQuestion('gad_02', 0); showResult();"class="hovergruen">überhaupt nicht</button>
-		<button onclick="updateQuestion('gad_02', 1); showResult();"class="hovergruen">an einzelnen Tagen</button>
-		<button onclick="updateQuestion('gad_02', 2); showResult();"class="hovergruen">an mehr als der Hälfte der Tage</button>
-		<button onclick="updateQuestion('gad_02', 3); showResult();"class="hovergruen">beinahe jeden Tag</button>
+		<button onclick="updateQuestion('gad_02', 0); moveToNext();"class="hovergruen">überhaupt nicht</button>
+		<button onclick="updateQuestion('gad_02', 1); moveToNext();"class="hovergruen">an einzelnen Tagen</button>
+		<button onclick="updateQuestion('gad_02', 2); moveToNext();"class="hovergruen">an mehr als der Hälfte der Tage</button>
+		<button onclick="updateQuestion('gad_02', 3); moveToNext();"class="hovergruen">beinahe jeden Tag</button>
 	</div>
+	
+	<div id="frage_5" class="fragenblock">
+	
+		<div class="botText">
+			Es gibt viele unterschiedliche Arten von Angeboten zur Stärkung der psychischen Gesundheit. 
+			Gibt es Angebote, die du ausschließen möchtest?
+		</div>
+		
+		<input type="checkbox" id="exclude_online">Online-Angebote</input>
+		<input type="checkbox" id="exclude_hotline">Telefonhotlines</input>
+		<br>
+		<button onclick="updateExclusion(); showResult();"class="hovergruen">Ergebnisse anzeigen</button>
+	</div>
+	
 	<br>
 	<button onclick="moveBack();" class="linkgelb">zurück</button>
 	

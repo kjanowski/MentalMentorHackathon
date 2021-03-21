@@ -37,13 +37,16 @@ function showResult()
 	var klinisch = (gadScore>=gadCutoff) || (phqScore>=phqCutoff);
 	var subklinisch = ((gadScore>0)&&(gadScore<gadCutoff)) || ((phqScore>0)&&(phqScore<phqCutoff));
 	
-	
-	var text = "Hier sind die Angebote, die ich für dich gefunden habe.";
-	//"GAD score: "+gadScore+", PHQ score: "+phqScore+" -> klinisch: "+klinisch;
+	//var text = "GAD score: "+gadScore+", PHQ score: "+phqScore+" -> klinisch: "+klinisch;
 	
 	var table = getOffers(klinisch, subklinisch);
+
+
+	var resultElement = document.getElementById("botResult");
 	
-	document.getElementById("botResult").innerHTML = text +"\n"+ table;
+	if(table.length==0)
+		resultElement.innerHTML = "Leider habe ich keine passenden Angebote gefunden. Das kann daran liegen, dass du zu viele Arten von Angeboten ausgeschlossen hast. Du könntest noch einmal zurück gehen und mehr Arten zulassen.";
+	else resultElement.innerHTML = "Hier sind die Angebote, die ich für dich gefunden habe.\n"+ table;
 }
 
 function isIncluded(angebot){
@@ -65,6 +68,8 @@ function isIncluded(angebot){
 
 function getOffers(klinisch, subklinisch)
 {
+	var numOffers = 0;
+	
 	//Tabellen-Header
 	var tableText = "<table><tr><th>Name</th><th>Kurzbeschreibung</th><th>Art des Angebots</th><th>Bezahlung</th><th>Link</th></tr>"
 	
@@ -80,6 +85,7 @@ function getOffers(klinisch, subklinisch)
 				
 			if(matchKlinisch || matchSubklinisch || matchNichtklinisch)
 			{
+				numOffers++; //Angebote zählen
 				
 				//Angebots-Art(en) ausgeben
 				var angebotsArt = "";
@@ -138,7 +144,14 @@ function getOffers(klinisch, subklinisch)
 		}
 	}
 	
-	//Tabelle abschliessen
+	//Sonderfall: keine Angebote gefunden
+	if(numOffers == 0)
+	{
+		return "";
+	}
+	
+	
+	//ansonsten die Tabelle abschliessen
 	tableText = tableText+"</table>";
 	
 	return tableText;

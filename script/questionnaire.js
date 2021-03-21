@@ -134,7 +134,7 @@ function getOffers(klinisch, subklinisch)
 				
 				//Tabellen-Zeile hinzufügen
 				tableText = tableText + "<tr>"
-						+"<td class=\name\">"+angebot.name+"</td>"
+						+"<td class=\"name\">"+angebot.name+"</td>"
 						+"<td class=\"beschreibung\">"+angebot.description+"</td>"
 						+"<td class=\"art\">"+angebotsArt+"</td>"
 						+"<td class=\"kosten\">"+cost+"</td>"

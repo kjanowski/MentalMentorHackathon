@@ -85,8 +85,9 @@ button.linkgelb{
 
 .ergebnisBlock{
 	width: 40%;
-	margin-left:10px;
-	margin-right:10px;
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom: 20px;
 	background:#ffffff;
 	padding: 10px;
 	height: 450px;
@@ -105,6 +106,7 @@ button.linkgelb{
 .ergebnisBlock .name{
 	font-size: 20px;
 	margin-top: 10px;
+	font-weight:bold;
 	margin-bottom: 10px;
 	background:#eeeeee; /*Platzhalter-Farbe*/
 }
@@ -125,6 +127,7 @@ button.linkgelb{
 #fortschritt-hg{
 	margin-top:20px;
 	margin-bottom:40px ;
+	border:1px solid #cccccc;
 	height:20px;
 	width:500px;
 	background:#3f3c3c;

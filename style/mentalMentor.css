@@ -2,7 +2,7 @@
 	--buttonColor: #468189;
 	--textColorWthie: white; 
 	--buttonColorGelb: #f2dd6e;
-	--fontFamily: Roboto;
+	--fontFamily: "Roboto", Sans-serif ;
 	--textColorInfo: #333333;
 
 }
@@ -14,6 +14,8 @@ body{
 .botText{
 	margin-top: 20px;
 	margin-bottom: 20px;
+	/* font-family: var(--fontFamily) */
+	color: #222222;
 }
 
 a.linkgruen{
@@ -100,9 +102,6 @@ button.linkgelb{
 	margin-left:-3px;
 	margin-top:-3px;
 	margin-bottom: 10px;
-	/* text-transform: capitalize; */
-	font-weight:bold;
-	color: white;
 	background:var(--buttonColor) ; /*Platzhalter-Farbe*/
 }
 

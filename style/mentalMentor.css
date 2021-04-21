@@ -1,6 +1,6 @@
 :root{
 	--buttonColor: #468189;
-	--textColorWthie: white; 
+	--textColorWthie: white;
 	--buttonColorGelb: #f2dd6e;
 	--fontFamily: "Roboto", Sans-serif ;
 	--textColorInfo: #333333;
@@ -16,6 +16,7 @@ body{
 	margin-bottom: 20px;
 	/* font-family: var(--fontFamily) */
 	color: #222222;
+	line-height: 1.6;
 }
 
 a.linkgruen{
@@ -24,7 +25,7 @@ a.linkgruen{
 	border-radius: 10px;
 	border: none;
 	color: var(--textColorWthie);
-  	font-weight:bold;	
+  	font-weight:bold;
 	padding:10px;
 	height:25px;
 }

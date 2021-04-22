@@ -4,6 +4,7 @@
 	--buttonColorGelb: #f2dd6e;
 	--fontFamily: "Roboto", Sans-serif ;
 	--textColorInfo: #333333;
+	--FontSizeBigButtons: 20px;
 
 }
 
@@ -19,13 +20,30 @@ body{
 	line-height: 1.6;
 }
 
+
+a.linkLOS{
+	display:inline-block;
+	background:var(--buttonColor);
+	border-radius: 10px;
+	color: var(--textColorWthie);
+	border: none;
+	font-weight:bold;
+	padding:15px;
+	height:25px;
+	width: 60px;
+	font-size:var(--FontSizeBigButtons);
+}
+
 a.linkgruen{
 	display:inline-block;
 	background:var(--buttonColor);
 	border-radius: 10px;
 	border: none;
 	color: var(--textColorWthie);
-  	font-weight:bold;
+	font-weight:bold;
+	text-decoration:none;
+
+
 	padding:10px;
 	height:25px;
 }
@@ -63,6 +81,7 @@ button.linkgelb{
 	border-radius: 10px;
 	border: none;
 	color: var(--textColorInfo);
+	text-decoration:none;
 	font-weight:bold;
 	font-size:16px;
 	padding:10px;
@@ -91,35 +110,70 @@ button.linkgelb{
 	margin-left:20px;
 	margin-right:20px;
 	margin-bottom: 20px;
-	background:#ffffff;
+	/* background:#FCF4D5; */
 	padding: 10px;
-	height: 450px;
-	border: 1px solid #cccccc;
+	padding-left: 20px;
+	padding-right:20px;
+	height: 520px;
+	border: 2px solid #cccccc;
 	display: inline-block;
 	vertical-align:top;
+	border-radius: 10px;
+}
+
+.ergebnisBlock .costLine{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 4px 10px;
+	text-align:left;
 }
 
 .ergebnisBlock .cost{
-	margin-left:-3px;
-	margin-top:-3px;
-	margin-bottom: 10px;
-	background:var(--buttonColor) ; /*Platzhalter-Farbe*/
+	margin-top: 20px;
+	margin-bottom: 20px;
+	background-color: #CFCFCF;
+	/* background-color: #eeeeee ;  */
+	/* text-align:right; */
+	padding: 4px 10px;
+	border-radius: 5px;
 }
 
 .ergebnisBlock .name{
+/* Test: */
+	/* background:#eeeeee; */
+	/* border: 5px solid var(--buttonColor); */
 	font-size: 20px;
 	margin-top: 10px;
 	font-weight:bold;
 	margin-bottom: 10px;
-	background:#eeeeee; /*Platzhalter-Farbe*/
+	padding: 4px 10px;
+	height: 50px;
+	border-radius: 10px;
+	/* background: green; /*Platzhalter-Farbe*/ */
 }
 
 .ergebnisBlock .description{
-	background:#fefefe; /*Platzhalter-Farbe*/
 	/* margin-top: 10px; */
-	margin:10px;
+	/* margin:10px; */
 	margin-bottom: 10px;
-	margin-right: 20px;
+	height: 290px;
+	padding: 10px 10px;
+	/* border: 1px solid var(--buttonColor); */
+	border-radius: 10px;
+	/* background:white; */
+	font-size: 110%
+
+}
+
+.ergebnisBlock hr.LineAngbebote{
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	height: 2px;
+	background-color: var(--buttonColor) ;
+	color: var(--buttonColor) ;
+	width:95% ;
+	text-align:left;
+	/* noshade; */
 }
 
 .ergebnisBlock a.linkgruen{
@@ -128,17 +182,23 @@ button.linkgelb{
 }
 
 #fortschritt-hg{
-	margin-top:20px;
-	margin-bottom:40px ;
+	margin-top:100px;
+	margin-bottom:20px ;
 	border:1px solid #cccccc;
-	height:20px;
-	width:500px;
+	height:30px;
+	width:600px;
 	background:#3f3c3c;
+	border-radius: 7px;
+
 }
 
 #fortschritt-vg{
-	height:20px;
+	height:25px;
 	background:#a1e8af;
+	padding-left: 20px;
+	padding-top: 5px;
+	border-radius: 5px;
+
 }
 
 .symptom

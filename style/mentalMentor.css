@@ -24,7 +24,7 @@ body{
 a.linkLOS{
 	display:inline-block;
 	background:var(--buttonColor);
-	border-radius: 10px;
+	border-radius: 45px;
 	color: var(--textColorWthie);
 	border: none;
 	font-weight:bold;
@@ -32,26 +32,24 @@ a.linkLOS{
 	height:25px;
 	width: 60px;
 	font-size:var(--FontSizeBigButtons);
+	text-decoration:none;
 }
 
 a.linkgruen{
 	display:inline-block;
 	background:var(--buttonColor);
-	border-radius: 10px;
+	border-radius: 30px;
 	border: none;
 	color: var(--textColorWthie);
 	font-weight:bold;
 	text-decoration:none;
-
-
-	padding:10px;
-	height:25px;
+	padding:10px 20px;
 }
 
 button.hovergruen{
 	background: lightgrey;
 	height:30px;
-	border-radius: 5px;
+	border-radius: 30px;
 	width:220px;
 	border: none;
 }
@@ -64,29 +62,30 @@ button.hovergruen:hover{
 a.linkgelb{
 	display:inline-block;
 	background:var(--buttonColorGelb);
-	border-radius: 10px;
+	border-radius: 30px;
 	border: none;
 	color: var(--textColorInfo);
 	font-weight:bold;
 	text-decoration:none;
-	padding:10px;
+	padding:10px 20px;
 	font-size:16px;
-	height:25px;
+	/* height:25px; */
 	vertical-align:top;
 }
 
 button.linkgelb{
 	display:inline-block;
 	background:var(--buttonColorGelb);
-	border-radius: 10px;
+	border-radius: 30px;
 	border: none;
 	color: var(--textColorInfo);
-	text-decoration:none;
 	font-weight:bold;
-	font-size:16px;
+	text-decoration:none;
 	padding:10px;
-	height:45px;
+	font-size:16px;
+	/* height:25px; */
 	vertical-align:top;
+	noshade
 }
 
 .infoQuestion{
@@ -173,7 +172,7 @@ button.linkgelb{
 	color: var(--buttonColor) ;
 	width:95% ;
 	text-align:left;
-	/* noshade; */
+	noshade;
 }
 
 .ergebnisBlock a.linkgruen{
@@ -188,16 +187,17 @@ button.linkgelb{
 	height:30px;
 	width:600px;
 	background:#3f3c3c;
-	border-radius: 7px;
-
+	border-radius: 10px;
 }
 
 #fortschritt-vg{
 	height:25px;
 	background:#a1e8af;
-	padding-left: 20px;
+	/* padding-left: 20px; */
 	padding-top: 5px;
 	border-radius: 5px;
+	width:600px;
+
 
 }
 

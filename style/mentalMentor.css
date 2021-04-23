@@ -203,7 +203,11 @@ button.linkgelb{
 
 .symptom
 {
-	margin-top:20px;
+	margin-top: 40px;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #cccccc;
+	border-radius: 5px;
 }
 
 .mehrfachwahl{

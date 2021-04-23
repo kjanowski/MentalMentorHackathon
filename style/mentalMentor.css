@@ -5,7 +5,6 @@
 	--fontFamily: "Roboto", Sans-serif ;
 	--textColorInfo: #333333;
 	--FontSizeBigButtons: 20px;
-
 }
 
 body{
@@ -130,12 +129,28 @@ button.linkgelb{
 .ergebnisBlock .cost{
 	margin-top: 20px;
 	margin-bottom: 20px;
-	background-color: #CFCFCF;
-	/* background-color: #eeeeee ;  */
+	/* background-color: #CFCFCF; */
+	background-color: #a1e8af;
 	/* text-align:right; */
-	padding: 4px 10px;
+	padding: 4px 0px;
+	/* padding-top: 6px; */
+	padding-right: 10px;
 	border-radius: 5px;
 }
+
+.ergebnisBlock .costSymb{
+	color:#a1e8af;
+	font-family:"Font Awesome 5 Free";
+	font-weight: 900;
+	line-height: 1;
+	margin-right: 5px;
+	font-size: 18px;
+	/* background-color: #CFCFCF; */
+	background-color: #468189;
+	padding: 3px 10px;
+	padding-bottom: 6px; */
+}
+
 
 .ergebnisBlock .name{
 /* Test: */
@@ -197,7 +212,6 @@ button.linkgelb{
 	padding-top: 5px;
 	border-radius: 5px;
 	width:600px;
-
 
 }
 

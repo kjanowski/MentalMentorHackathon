@@ -137,7 +137,7 @@ function getOffers(klinisch, subklinisch)
 
 				//Ergebnis-Block hinzufügen
 				resultText = resultText + "<div class=\"ergebnisBlock\">"
-						+"<div class=\"costLine\"><span class=\"cost\">"+cost+"</span></div>"
+						+"<div class=\"costLine\"><span class=\"cost\"><span class=\"costSymb\">i</span>"+cost+"</span></div>"
 						+"<div class=\"name\">"+angebot.name+"</div>"
 						+"<div ><hr class=\"LineAngbebote\"></div>"
 						+"<div class=\"description\">"+angebot.description+"</div>"

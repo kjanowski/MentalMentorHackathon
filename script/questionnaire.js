@@ -94,42 +94,42 @@ function getOffers(klinisch, subklinisch)
 				var angebotsArt = "";
 
 				if(angebot.art_einzelangebot == 1)
-					angebotsArt += "Einzelangebot";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Kursangebot (Online & Offline)</span>";
 
 				if(angebot.art_website_pdf == 1)
 				{
-					if(angebotsArt.length>0) angebotsArt +=", ";
-					angebotsArt += "Website/PDF";
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Informationsangebot</span>";
 				}
 
 				if(angebot.art_app == 1)
 				{
-					if(angebotsArt.length>0) angebotsArt +=", ";
-					angebotsArt += "App";
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">App</span>";
 				}
 
 				if(angebot.art_hotline == 1)
 				{
-					if(angebotsArt.length>0) angebotsArt +=", ";
-					angebotsArt += "Hotline";
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Telefonisches Angebot</span>";
 				}
 
 				if(angebot.art_vermittlung == 1)
 				{
-					if(angebotsArt.length>0) angebotsArt +=", ";
-					angebotsArt += "Vermittlung";
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Psychothereapievermittlung</span>";
 				}
 
 				if(angebot.art_beratung == 1)
 				{
-					if(angebotsArt.length>0) angebotsArt +=", ";
-					angebotsArt += "Beratung";
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Beratungsangebot</span>";
 				}
 
 				if(angebot.art_austausch == 1)
 				{
-					if(angebotsArt.length>0) angebotsArt +=", ";
-					angebotsArt += "Austausch";
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Selbsthilfegruppen und Chatforen</span>";
 				}
 
 				//Kostenart (1 abziehen, um Index in der Mapping-Liste zu erhalten)
@@ -141,7 +141,8 @@ function getOffers(klinisch, subklinisch)
 						+"<div class=\"name\">"+angebot.name+"</div>"
 						+"<div ><hr class=\"LineAngbebote\"></div>"
 						+"<div class=\"description\">"+angebot.description+"</div>"
-//						+"<center> <a class=\"linkgruen\" href=\""+angebot.link+"\" target=\"_blank\">zum Angebot</a></center> "
+						+"<div ><hr class=\"LineAngbebote\"></div>"
+						+"<div class=\"AngebotsArt\"><span class=\"AngebotsArtHead\">Art des Angebots: <br></span>"+angebotsArt+"</div>"
 						+"<div style=\"text-align:right\"> <a class=\"linkgruen\" href=\""+angebot.link+"\" target=\"_blank\">Zum Angebot</a></div>"
 					+"</div>";
 			}

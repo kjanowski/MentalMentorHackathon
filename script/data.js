@@ -2,8 +2,11 @@ var cost_map = ["Kostenfrei", "Übernahme durch Krankenkasse möglich", "Kostenp
 
 var angebote = [
     {
-        name:   "Patient:innenservice (116117) und Ärzt:innen-Suche der Kassenärztlichen Bundesvereinigung (KBV)",
-        description:    "In einer Psychotherapie kannst du mit einer speziell dafür ausgebildeten Person (psychologische oder ärztliche Psychotherapeut:innen) über deine Probleme oder Sorgen sprechen. Diese Behandlung kann dir helfen, wenn du merkst, dass du deine täglichen Aufgaben z. B. im Haushalt oder bei der Arbeit nicht mehr schaffst. Wenn du überlegst, eine Psychotherapie zu machen, kannst du über die Website der KBV (Kassenärztliche Bundesvereinigung) herausfinden, wo es Psychotherapeut:innen in deiner Nähe gibt. Über die Termin-Servicestellen kannst du telefonisch unter der Nummer 116117 einen Termin für eine psychotherapeutische Sprechstunde vereinbaren.",
+        // name:   "Patient:innenservice (116117) und Ärzt:innen-Suche der Kassenärztlichen Bundesvereinigung (KBV)",
+        // name:   "Patient:innenservice (116117) und Ärzt:innen-Suche Kassenärztliche Bundesvereinigung (KBV)",
+        name:   "Patient:innenservice und Ärzt:innen-Suche Kassenärztliche Bundesvereinigung (KBV)",
+        // description:    "In einer Psychotherapie kannst du mit einer speziell dafür ausgebildeten Person (psychologische oder ärztliche Psychotherapeut:innen) über deine Probleme oder Sorgen sprechen. Diese Behandlung kann dir helfen, wenn du merkst, dass du deine täglichen Aufgaben z. B. im Haushalt oder bei der Arbeit nicht mehr schaffst. Wenn du überlegst, eine Psychotherapie zu machen, kannst du über die Website der KBV (Kassenärztliche Bundesvereinigung) herausfinden, wo es Psychotherapeut:innen in deiner Nähe gibt. Über die Termin-Servicestellen kannst du telefonisch unter der Nummer 116117 einen Termin für eine psychotherapeutische Sprechstunde vereinbaren.",
+        description:    "In einer Psychotherapie kannst du mit einer speziell dafür ausgebildeten Person über deine Probleme oder Sorgen sprechen. Diese Behandlung kann dir helfen, wenn du deine täglichen Aufgaben z. B. im Haushalt oder bei der Arbeit nicht mehr schaffst. Wenn du überlegst, eine Psychotherapie zu machen, kannst du über die Website der Kassenärztlichen Bundesvereinigung (KBV) herausfinden, wo es Psychotherapeut:innen in deiner Nähe gibt. Über die Termin-Servicestellen kannst du telefonisch unter der Nummer <i> 116117 </i> einen Termin für eine psychotherapeutische Sprechstunde vereinbaren.",
         link:   "https://www.kbv.de/html/arztsuche.php",
         cost:   2,
         location:   3,

@@ -141,7 +141,7 @@ function getOffers(klinisch, subklinisch)
 						+"<div class=\"name\">"+angebot.name+"</div>"
 						+"<div ><hr class=\"LineAngbebote\"></div>"
 						+"<div class=\"description\">"+angebot.description+"</div>"
-//						+"<center> <a class=\"linkgruen\" href=\""+angebot.link+"\" target=\"_blank\">zum Angebot</a></center> "
+						+"<div class=\"AngebotsArt\"><span class=\"AngebotsArtHead\">Art des Angebots:<br></span>"+angebotsArt+"</div>"
 						+"<div style=\"text-align:right\"> <a class=\"linkgruen\" href=\""+angebot.link+"\" target=\"_blank\">Zum Angebot</a></div>"
 					+"</div>";
 			}

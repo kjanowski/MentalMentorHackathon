@@ -53,6 +53,51 @@ function isAccessFiltered(){
 	return false;
 }
 
+function resetFilters(){
+	var i=0;
+	while(i<filters_type.length)
+	{
+		filters_type[i].active = false;
+		
+		//den Button mit der geeigneten Klasse versehen
+		var button = document.getElementById(filters_type[i].button_id);
+		if(filters_type[i].active)
+			button.class = "buttonFilter active";
+		else button.class = "buttonFilter inactive";
+		
+		i++;
+	}
+	
+	i=0;
+	while(i<filters_cost.length)
+	{
+		filters_cost[i].active = false;
+
+		//den Button mit der geeigneten Klasse versehen
+		var button = document.getElementById(filters_cost[i].button_id);
+		if(filters_cost[i].active)
+			button.class = "buttonFilter active";
+		else button.class = "buttonFilter inactive";
+
+		i++;
+	}
+	
+	i=0;
+	while(i<filters_access.length)
+	{
+		filters_access[i].active = false;
+		
+		//den Button mit der geeigneten Klasse versehen
+		var button = document.getElementById(filters_access[i].button_id);
+		if(filters_access[i].active)
+			button.class = "buttonFilter active";
+		else button.class = "buttonFilter inactive";
+
+		i++;
+	}
+	
+	showOffers();
+}
 
 function isIncludedInFilter(angebot){
 	var i;
@@ -142,3 +187,99 @@ function toggleTypeFilter(tagName){
 
 	showOffers();
 }
+
+
+function getOffers(klinisch, subklinisch)
+{
+	var numOffers = 0;
+
+	//Ergebnis-Liste anfangs leer
+	var resultText = "<div class=\"ergebnisse\">"
+
+	for(angebot of angebote)
+	{
+		//zuerst auf Ausschluss von Kategorien prüfen
+		if(isIncludedInFilter(angebot))
+		{
+				numOffers++; //Angebote zählen
+
+				//Angebots-Art(en) ausgeben
+				var angebotsArt = "";
+
+				if(angebot.art_einzelangebot == 1)
+					angebotsArt += "<span class=\"AngebortsArtCat\">Kursangebot (Online & Offline)</span>";
+
+				if(angebot.art_website_pdf == 1)
+				{
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Informationsangebot</span>";
+				}
+
+				if(angebot.art_app == 1)
+				{
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">App</span>";
+				}
+
+				if(angebot.art_hotline == 1)
+				{
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Telefonisches Angebot</span>";
+				}
+
+				if(angebot.art_vermittlung == 1)
+				{
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Psychothereapievermittlung</span>";
+				}
+
+				if(angebot.art_beratung == 1)
+				{
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Beratungsangebot</span>";
+				}
+
+				if(angebot.art_austausch == 1)
+				{
+					if(angebotsArt.length>0) angebotsArt +=" ";
+					angebotsArt += "<span class=\"AngebortsArtCat\">Selbsthilfegruppen und Chatforen</span>";
+				}
+
+				//Kostenart (1 abziehen, um Index in der Mapping-Liste zu erhalten)
+				var cost = cost_map[angebot.cost-1];
+
+				//Ergebnis-Block hinzufügen
+				resultText = resultText + "<div class=\"ergebnisBlock\">"
+						+"<div class=\"costLine\"><span class=\"cost\"><span class=\"costSymb\">i</span>"+cost+"</span></div>"
+						+"<div class=\"name\">"+angebot.name+"</div>"
+						+"<div ><hr class=\"LineAngbebote\"></div>"
+						+"<div class=\"description\">"+angebot.description+"</div>"
+						+"<div ><hr class=\"LineAngbebote\"></div>"
+						+"<div class=\"AngebotsArt\"><span class=\"AngebotsArtHead\">Art des Angebots: <br></span>"+angebotsArt+"</div>"
+						+"<div style=\"text-align:right\"> <a class=\"linkgruen\" href=\""+angebot.link+"\" target=\"_blank\">Zum Angebot</a></div>"
+					+"</div>";
+			
+		}
+	}
+
+	//Sonderfall: keine Angebote gefunden
+	if(numOffers == 0)
+	{
+		return "";
+	}
+
+
+	//ansonsten die Liste abschliessen
+	resultText = resultText+"</div>";
+
+	return resultText;
+}
+
+function showOffers(){
+	var resultElement = document.getElementById("botResult");
+
+	if(result.length==0)
+		resultElement.innerHTML = "<div class=\"botText\">Leider haben wir keine passenden Angebote gefunden. Das kann daran liegen, dass du zu viele Arten von Angeboten ausgeschlossen hast. Du könntest versuchen, mehr Arten zulassen.</div>";
+	else resultElement.innerHTML = "<div class=\"botText\">Hier sind die Angebote, die wir für dich gefunden haben.</div>"+ result;
+}
+

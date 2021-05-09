@@ -227,8 +227,8 @@ function updateButton(buttonID, isActive)
 	//den Button mit der geeigneten Klasse versehen
 	var button = document.getElementById(buttonID);
 	if(isActive)
-		button.class = "buttonFilter buttonActive";
-	else button.class = "buttonFilter buttonInactive";
+		button.style.background = "var(--filter-active)";
+	else button.style.background = "var(--filter-inactive)";
 }
 
 function getOffers()

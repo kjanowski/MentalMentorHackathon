@@ -268,8 +268,8 @@ button.linkgelb{
 ### Filterseite
 ### */
 
-column3{
-	width: 300px;
+.column3{
+	width: 290px;
 	display: inline-block;
 }
 

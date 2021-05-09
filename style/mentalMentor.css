@@ -268,9 +268,23 @@ button.linkgelb{
 ### Filterseite
 ### */
 
+.tagsHeader h1{
+	bottom: 0px;
+	vertical-align: bottom;
+	/* margin-top: auto; */
+	display: inline-block;
+	position: relative;
+}
+
+.tagsHeader .column3{
+	height: 100px;
+}
+
 .column3{
+	vertical-align: top;
 	width: 290px;
 	display: inline-block;
+
 }
 
 button.buttonFilter{
@@ -278,7 +292,7 @@ button.buttonFilter{
 	height:30px;
 	border: 2px solid grey;
 	border-radius: var(--border_rad_inline_buttons);
-	width:220px;
+	width:auto;
 }
 
 

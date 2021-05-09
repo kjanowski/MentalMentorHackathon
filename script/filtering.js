@@ -108,16 +108,21 @@ function isIncludedInFilter(angebot){
 	{
 		//falls irgendein Tag im "Art des Angebots"-Block ausgewählt ist, wird Filterung überprüft
 		i=0;
-		while((i<filters_type.length) || (!included))
+		typeIncluded = false;
+		while(i<filters_type.length)
 		{
 			var internalName = filters_type[i].internalName; //Anzeigename auf Feld in der Datenstruktur abbilden
+			console.log(angebot.name+": angebot["+internalName+"] = "+angebot[internalName]);
 
 			//sobald ein aktiver Filter mit dem Angebot übereinstimmt, ist es eingeschlossen
-			included = included || (filters_type[i].active && (angebot[internalName] == 1))
+			var tagMatch = (filters_type[i].active && (angebot[internalName] == 1));
+			console.log(angebot.name+": tagMatch = "+tagMatch);
+
+			//included wird true, sobald eines der "Art des Angebots"-Tags zutrifft
+			typeIncluded = typeIncluded || tagMatch;
 
 			i++;
 		}
-		//included ist true, falls eines der "Art des Angebots"-Tags zutrifft
 	}
 
 	//prüfe Kosten --------------------------------------------------------------------
@@ -125,7 +130,7 @@ function isIncludedInFilter(angebot){
 
 	if(isCostFiltered())
 	{
-		costIncluded = filters_cost[angebot.cost].active;
+		costIncluded = filters_cost[(angebot.cost-1)].active;
 		//included ist true, falls die Kostenart des Angebots ausgewählt ist
 	}
 
@@ -172,6 +177,8 @@ function toggleTypeFilter(tagName){
 		{
 			//Filter umschalten 
 			filters_type[i].active = !filters_type[i].active;
+
+			console.log("Typ-Filter gefunden: "+i+", auf "+filters_type[i].active+" gesetzt");
 			
 			//den Button mit der geeigneten Klasse versehen
 			var button = document.getElementById(filters_type[i].button_id);
@@ -189,7 +196,7 @@ function toggleTypeFilter(tagName){
 }
 
 
-function getOffers(klinisch, subklinisch)
+function getOffers()
 {
 	var numOffers = 0;
 
@@ -276,6 +283,7 @@ function getOffers(klinisch, subklinisch)
 }
 
 function showOffers(){
+	var result = getOffers();
 	var resultElement = document.getElementById("botResult");
 
 	if(result.length==0)

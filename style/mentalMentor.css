@@ -266,8 +266,9 @@ button.linkgelb{
 ### Filterseite
 ### */
 
-table.column3{
-	width: 300px
+column3{
+	width: 300px;
+	display: inline-block;
 }
 
 button.buttonFilter{

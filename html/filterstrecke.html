@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+<head>
+	<title>MentalMentor Filterstrecke</title>
+	<script src="../script/data.js"></script>
+	<script src="../script/questionnaire.js"></script>
+	<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+	<link rel="stylesheet" type="text/css" href="../style/mentalMentor.css">
+</head>
+<body>
+	<div class="page">
+
+		<div id="tags">
+			<div class="column3">
+				<h1>Art der Unterstützung</h1>
+				<button onclick="addFilter('Telefonisches Angebot');">Telefonisches Angebot</button>
+				
+			</div>
+			<div class="column3">
+				<h1>Kosten</h1>
+			</div>
+			<div class="column3">
+				<h1>Zugang</h1>
+			</div>
+			<button onclick="resetFilters();">Filter zurücksetzen</button>
+		</div>
+
+		<br>
+
+		<br>
+		<div id="botResult">
+
+		</div>
+	</div>
+	<script> initQuestionnaire(); </script>
+</body>
+</html>

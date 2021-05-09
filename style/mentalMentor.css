@@ -5,6 +5,7 @@
 	--fontFamily: "Roboto", Sans-serif ;
 	--textColorInfo: #333333;
 	--FontSizeBigButtons: 20px;
+	--border_rad_inline_buttons: 4px;
 }
 
 body{
@@ -197,7 +198,7 @@ button.linkgelb{
 	height: 95px;
 	padding: 0px 10px;
 	/* border: 1px solid var(--buttonColor); */
-	border-radius: 10px;
+	/* border-radius:  ; */
 	line-height: 25px;
 	/* background:grey; */
 	/* font-size: 110% */
@@ -216,7 +217,7 @@ button.linkgelb{
 	padding: 2px 6px;
 	/* padding-top: 6px; */
 	/* padding-right: 10px; */
-	border-radius: 4px;
+	border-radius: var(--border_rad_inline_buttons);
 	white-space:nowrap;
 	font-size: 15px;
 }
@@ -260,6 +261,20 @@ button.linkgelb{
 	margin-top:20px;
 	margin-bottom:20px;
 }
+
+/* ###
+### Filterseite
+### */
+
+button.buttonFilter{
+	background: lightgrey;
+	height:30px;
+	border: 1px solid #cccccc;
+	border-radius: var(--border_rad_inline_buttons);
+	width:220px;
+	border: none;
+}
+
 
 .page{
 	width:900px;

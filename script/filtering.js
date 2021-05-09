@@ -58,12 +58,7 @@ function resetFilters(){
 	while(i<filters_type.length)
 	{
 		filters_type[i].active = false;
-		
-		//den Button mit der geeigneten Klasse versehen
-		var button = document.getElementById(filters_type[i].button_id);
-		if(filters_type[i].active)
-			button.class = "buttonFilter active";
-		else button.class = "buttonFilter inactive";
+		updateButton(filters_type[i].button_id, filters_type[i].active);
 		
 		i++;
 	}
@@ -72,12 +67,7 @@ function resetFilters(){
 	while(i<filters_cost.length)
 	{
 		filters_cost[i].active = false;
-
-		//den Button mit der geeigneten Klasse versehen
-		var button = document.getElementById(filters_cost[i].button_id);
-		if(filters_cost[i].active)
-			button.class = "buttonFilter active";
-		else button.class = "buttonFilter inactive";
+		updateButton(filters_cost[i].button_id, filters_cost[i].active);
 
 		i++;
 	}
@@ -86,12 +76,7 @@ function resetFilters(){
 	while(i<filters_access.length)
 	{
 		filters_access[i].active = false;
-		
-		//den Button mit der geeigneten Klasse versehen
-		var button = document.getElementById(filters_access[i].button_id);
-		if(filters_access[i].active)
-			button.class = "buttonFilter active";
-		else button.class = "buttonFilter inactive";
+		updateButton(filters_access[i].button_id, filters_access[i].active);
 
 		i++;
 	}
@@ -179,12 +164,8 @@ function toggleTypeFilter(tagName){
 			filters_type[i].active = !filters_type[i].active;
 
 			console.log("Typ-Filter gefunden: "+i+", auf "+filters_type[i].active+" gesetzt");
-			
-			//den Button mit der geeigneten Klasse versehen
-			var button = document.getElementById(filters_type[i].button_id);
-			if(filters_type[i].active)
-				button.class = "buttonFilter active";
-			else button.class = "buttonFilter inactive";
+			updateButton(filters_type[i].button_id, filters_type[i].active);
+
 			
 			found = true;	//benötigtes Tag wurde gefunden
 		}
@@ -195,6 +176,60 @@ function toggleTypeFilter(tagName){
 	showOffers();
 }
 
+function toggleCostFilter(tagName){
+	var i=0;
+	var found = false;
+
+	while(!found && (i<filters_cost.length))
+	{
+		if(filters_cost[i].displayName == tagName)
+		{
+			//Filter umschalten 
+			filters_cost[i].active = !filters_type[i].active;
+
+			console.log("Kosten-Filter gefunden: "+i+", auf "+filters_cost[i].active+" gesetzt");			
+			updateButton(filters_cost[i].button_id, filters_cost[i].active);
+			
+			found = true;	//benötigtes Tag wurde gefunden
+		}
+		
+		i++;
+	}
+
+	showOffers();
+}
+
+function toggleAccessFilter(tagName){
+	var i=0;
+	var found = false;
+
+	while(!found && (i<filters_access.length))
+	{
+		if(filters_access[i].displayName == tagName)
+		{
+			//Filter umschalten 
+			filters_access[i].active = !filters_access[i].active;
+
+			console.log("Zugangs-Filter gefunden: "+i+", auf "+filters_access[i].active+" gesetzt");
+			updateButton(filters_access[i].button_id, filters_access[i].active);
+			
+			found = true;	//benötigtes Tag wurde gefunden
+		}
+		
+		i++;
+	}
+
+	showOffers();
+}
+
+function updateButton(buttonID, isActive)
+{
+	//den Button mit der geeigneten Klasse versehen
+	var button = document.getElementById(buttonID);
+	if(isActive)
+		button.class = "buttonFilter buttonActive";
+	else button.class = "buttonFilter buttonInactive";
+}
 
 function getOffers()
 {

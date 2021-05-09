@@ -184,8 +184,13 @@ function toggleCostFilter(tagName){
 	{
 		if(filters_cost[i].displayName == tagName)
 		{
+<<<<<<< HEAD
 			//Filter umschalten
 			filters_cost[i].active = !filters_type[i].active;
+=======
+			//Filter umschalten 
+			filters_cost[i].active = !filters_cost[i].active;
+>>>>>>> f5c193dfaaded3f97d7f76a9670f05f9c9bca7bb
 
 			console.log("Kosten-Filter gefunden: "+i+", auf "+filters_cost[i].active+" gesetzt");
 			updateButton(filters_cost[i].button_id, filters_cost[i].active);

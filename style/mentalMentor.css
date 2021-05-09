@@ -266,6 +266,10 @@ button.linkgelb{
 ### Filterseite
 ### */
 
+table.column3{
+	width: 300px
+}
+
 button.buttonFilter{
 	background: lightgrey;
 	height:30px;
@@ -274,6 +278,8 @@ button.buttonFilter{
 	width:220px;
 	border: none;
 }
+
+
 
 
 .page{

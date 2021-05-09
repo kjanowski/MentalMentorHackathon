@@ -14,24 +14,24 @@
 		<div id="tags">
 			<div class="column3">
 				<h1>Art der Unterstützung</h1>
-				<button class="buttonFilter" onclick="addFilter('Telefonisches Angebot');">Telefonisches Angebot</button>
-				<button class="buttonFilter" onclick="addFilter('Psychotherapievermittlung');">Psychotherapievermittlung</button>
-				<button class="buttonFilter" onclick="addFilter('Beratungsangebot');">Beratungsangebot</button>
-				<button class="buttonFilter" onclick="addFilter('Informationsangebot');">Informationsangebot</button>
-				<button class="buttonFilter" onclick="addFilter('App');">App</button>
-				<button class="buttonFilter" onclick="addFilter('Selbsthilfegruppe und -forum');">Selbsthilfegruppe und -forum </button>
-				<button class="buttonFilter" onclick="addFilter('Kursangebot (Online & Offline)');">Kursangebot (Online & Offline)</button>
+				<button class="buttonFilter" onclick="toggleFilter('Telefonisches Angebot');">Telefonisches Angebot</button>
+				<button class="buttonFilter" onclick="toggleFilter('Psychotherapievermittlung');">Psychotherapievermittlung</button>
+				<button class="buttonFilter" onclick="toggleFilter('Beratungsangebot');">Beratungsangebot</button>
+				<button class="buttonFilter" onclick="toggleFilter('Informationsangebot');">Informationsangebot</button>
+				<button class="buttonFilter" onclick="toggleFilter('App');">App</button>
+				<button class="buttonFilter" onclick="toggleFilter('Selbsthilfegruppe und -forum');">Selbsthilfegruppe und -forum </button>
+				<button class="buttonFilter" onclick="toggleFilter('Kursangebot (Online & Offline)');">Kursangebot (Online & Offline)</button>
 			</div>
 			<div class="column3">
 				<h1>Kosten</h1>
-				<button class="buttonFilter" onclick="addFilter('Kostenlos');">Kostenlos</button>
-				<button class="buttonFilter" onclick="addFilter('Kostenübernahme durch Krankenkasse');">Kostenübernahme durch Krankenkasse</button>
-				<button class="buttonFilter" onclick="addFilter('(Teilweise) Kostenpflichtig');">(Teilweise) Kostenpflichtig</button>
+				<button class="buttonFilter" onclick="toggleFilter('Kostenlos');">Kostenlos</button>
+				<button class="buttonFilter" onclick="toggleFilter('Kostenübernahme durch Krankenkasse');">Kostenübernahme durch Krankenkasse</button>
+				<button class="buttonFilter" onclick="toggleFilter('(Teilweise) Kostenpflichtig');">(Teilweise) Kostenpflichtig</button>
 			</div>
 			<div class="column3">
 				<h1>Zugang</h1>
-				<button class="buttonFilter" onclick="addFilter('Offline');">Offline</button>
-				<button class="buttonFilter" onclick="addFilter('Online');">Online</button>
+				<button class="buttonFilter" onclick="toggleFilter('Offline');">Offline</button>
+				<button class="buttonFilter" onclick="toggleFilter('Online');">Online</button>
 			</div>
 			<button onclick="resetFilters();">Filter zurücksetzen</button>
 		</div>
@@ -43,6 +43,6 @@
 
 		</div>
 	</div>
-	<script> initQuestionnaire(); </script>
+	<script> resetFilters(); </script>
 </body>
 </html>

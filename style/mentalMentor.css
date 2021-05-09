@@ -270,10 +270,14 @@ button.linkgelb{
 
 .tagsHeader h1{
 	bottom: 0px;
-	vertical-align: bottom;
 	/* margin-top: auto; */
+	height: 50px;
 	display: inline-block;
 	position: relative;
+	vertical-align: bottom;
+	bottom: 0;
+	margin-top: 20px;
+	/* margin-bottom: 40px; */
 }
 
 .tagsHeader .column3{
@@ -281,18 +285,19 @@ button.linkgelb{
 }
 
 .column3{
-	vertical-align: top;
+	vertical-align:top;
 	width: 290px;
 	display: inline-block;
-
 }
+
 
 button.buttonFilter{
 	background: lightgrey;
 	height:30px;
-	border: 2px solid grey;
+	border: 1px solid grey;
 	border-radius: var(--border_rad_inline_buttons);
 	width:auto;
+	margin-top: 4px;
 }
 
 

@@ -59,10 +59,10 @@ function resetFilters(){
 	{
 		filters_type[i].active = false;
 		updateButton(filters_type[i].button_id, filters_type[i].active);
-		
+
 		i++;
 	}
-	
+
 	i=0;
 	while(i<filters_cost.length)
 	{
@@ -71,7 +71,7 @@ function resetFilters(){
 
 		i++;
 	}
-	
+
 	i=0;
 	while(i<filters_access.length)
 	{
@@ -80,7 +80,7 @@ function resetFilters(){
 
 		i++;
 	}
-	
+
 	showOffers();
 }
 
@@ -160,16 +160,16 @@ function toggleTypeFilter(tagName){
 	{
 		if(filters_type[i].displayName == tagName)
 		{
-			//Filter umschalten 
+			//Filter umschalten
 			filters_type[i].active = !filters_type[i].active;
 
 			console.log("Typ-Filter gefunden: "+i+", auf "+filters_type[i].active+" gesetzt");
 			updateButton(filters_type[i].button_id, filters_type[i].active);
 
-			
+
 			found = true;	//benötigtes Tag wurde gefunden
 		}
-		
+
 		i++;
 	}
 
@@ -184,15 +184,15 @@ function toggleCostFilter(tagName){
 	{
 		if(filters_cost[i].displayName == tagName)
 		{
-			//Filter umschalten 
+			//Filter umschalten
 			filters_cost[i].active = !filters_type[i].active;
 
-			console.log("Kosten-Filter gefunden: "+i+", auf "+filters_cost[i].active+" gesetzt");			
+			console.log("Kosten-Filter gefunden: "+i+", auf "+filters_cost[i].active+" gesetzt");
 			updateButton(filters_cost[i].button_id, filters_cost[i].active);
-			
+
 			found = true;	//benötigtes Tag wurde gefunden
 		}
-		
+
 		i++;
 	}
 
@@ -207,15 +207,15 @@ function toggleAccessFilter(tagName){
 	{
 		if(filters_access[i].displayName == tagName)
 		{
-			//Filter umschalten 
+			//Filter umschalten
 			filters_access[i].active = !filters_access[i].active;
 
 			console.log("Zugangs-Filter gefunden: "+i+", auf "+filters_access[i].active+" gesetzt");
 			updateButton(filters_access[i].button_id, filters_access[i].active);
-			
+
 			found = true;	//benötigtes Tag wurde gefunden
 		}
-		
+
 		i++;
 	}
 
@@ -300,7 +300,7 @@ function getOffers()
 						+"<div class=\"AngebotsArt\"><span class=\"AngebotsArtHead\">Art des Angebots: <br></span>"+angebotsArt+"</div>"
 						+"<div style=\"text-align:right\"> <a class=\"linkgruen\" href=\""+angebot.link+"\" target=\"_blank\">Zum Angebot</a></div>"
 					+"</div>";
-			
+
 		}
 	}
 
@@ -325,4 +325,3 @@ function showOffers(){
 		resultElement.innerHTML = "<div class=\"botText\">Leider haben wir keine passenden Angebote gefunden. Das kann daran liegen, dass du zu viele Arten von Angeboten ausgeschlossen hast. Du könntest versuchen, mehr Arten zulassen.</div>";
 	else resultElement.innerHTML = "<div class=\"botText\">Hier sind die Angebote, die wir für dich gefunden haben.</div>"+ result;
 }
-

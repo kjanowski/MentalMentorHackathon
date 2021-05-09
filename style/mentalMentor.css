@@ -6,6 +6,8 @@
 	--textColorInfo: #333333;
 	--FontSizeBigButtons: 20px;
 	--border_rad_inline_buttons: 4px;
+	--filter-active: grey;
+	--filter-inactive: white;
 }
 
 body{
@@ -274,13 +276,10 @@ column3{
 button.buttonFilter{
 	background: lightgrey;
 	height:30px;
-	border: 1px solid #cccccc;
+	border: 2px solid grey;
 	border-radius: var(--border_rad_inline_buttons);
 	width:220px;
-	border: none;
 }
-
-
 
 
 .page{

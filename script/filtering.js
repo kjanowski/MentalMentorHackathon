@@ -125,10 +125,22 @@ function toggleTypeFilter(tagName){
 	{
 		if(filters_type[i].displayName == tagName)
 		{
+			//Filter umschalten 
 			filters_type[i].active = !filters_type[i].active;
+			
+			//den Button mit der geeigneten Klasse versehen
+			var button = document.getElementById(filters_type[i].button_id);
+			if(filters_type[i].active)
+				button.class = "buttonFilter active";
+			else button.class = "buttonFilter inactive";
+			
+			found = true;	//benötigtes Tag wurde gefunden
 		}
+		
+		i++;
 	}
 	
+	showOffers();
 }
 
 

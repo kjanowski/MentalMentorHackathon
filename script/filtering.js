@@ -1,6 +1,11 @@
 filters_type = [];
 filters_type[0]= { displayName:"Telefonisches Angebot", internalName:"art_hotline", active:false };
 filters_type[1]= { displayName:"Psychotherapievermittlung", internalName:"art_vermittlung", active:false };
+filters_type[2]= { displayName:"Beratungsangebot", internalName:"art_beratung", active:false };
+filters_type[3]= { displayName:"Informationsangebot", internalName:"art_website_pdf", active:false };
+filters_type[4]= { displayName:"App", internalName:"art_app", active:false };
+filters_type[5]= { displayName:"Selbsthilfegruppe und -forum", internalName:"art_austausch", active:false };
+filters_type[6]= { displayName:"Kursangebot (Online & Offline)", internalName:"art_einzelangebot", active:false };
 
 filters_cost = [];
 filters_cost[0] = { displayName:"Kostenlos", cost_value:0, active:false};
@@ -9,8 +14,8 @@ filters_cost[2] = { displayName:"Kostenpflichtig", cost_value:2, active:false};
 filters_cost[3] = { displayName:"Teilweise Kostenpflichtig", cost_value:3, active:false};
 
 filters_access = [];
-filters_access[0] = {displayName:"Online", contact_value:"online", active: false};
-filters_access[1] = {displayName:"Offline", contact_value:"offline", active: false};
+filters_access[0] = {displayName:"Online", contact_value:"online", button_id:"access_0", active: false};
+filters_access[1] = {displayName:"Offline", contact_value:"offline", button_id:"access_1", active: false};
 
 function isTypeFiltered(){
 	var i=0;
@@ -112,7 +117,19 @@ function isIncludedInFilter(angebot){
 }
 
 
-
+function toggleTypeFilter(tagName){
+	var i=0;
+	var found = false;
+	
+	while(!found && (i<filters_type.length))
+	{
+		if(filters_type[i].displayName == tagName)
+		{
+			filters_type[i].active = !filters_type[i].active;
+		}
+	}
+	
+}
 
 
 
